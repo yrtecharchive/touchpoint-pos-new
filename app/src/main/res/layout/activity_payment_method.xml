@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FF"
+    tools:context=".PaymentMethod">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:id="@+id/paymodeHeader"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touchpoint"
+            android:layout_marginStart="15dp"
+            android:textSize="18dp"
+            android:textColor="#484848"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sansation_bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:layout_below="@id/paymodeHeader">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Payment Method"
+            android:textSize="20sp"
+            android:textColor="#272727"
+            android:fontFamily="@font/sansation_bold"
+            android:layout_marginBottom="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="?android:attr/dividerHorizontal"
+            android:dividerPadding="10dp">
+
+            <RadioButton
+                android:id="@+id/radioCash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cash"
+                android:textSize="18sp"
+                android:fontFamily="@font/sansation_regular"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_button_card_selector"
+                android:padding="16dp"
+                android:textColor="#484848"/>
+
+            <RadioButton
+                android:id="@+id/radioGcash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gcash"
+                android:textSize="18sp"
+                android:fontFamily="@font/sansation_regular"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_button_card_selector"
+                android:padding="16dp"
+                android:textColor="#484848"/>
+
+            <RadioButton
+                android:id="@+id/radioPaymaya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paymaya"
+                android:textSize="18sp"
+                android:fontFamily="@font/sansation_regular"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_button_card_selector"
+                android:padding="16dp"
+                android:textColor="#484848"/>
+
+            <RadioButton
+                android:id="@+id/radioComplimentary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complimentary"
+                android:textSize="18sp"
+                android:fontFamily="@font/sansation_regular"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_button_card_selector"
+                android:padding="16dp"
+                android:textColor="#484848"/>
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

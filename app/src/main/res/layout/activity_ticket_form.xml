@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FF"
+    tools:context=".TicketForm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:id="@+id/anprFormHeader"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touchpoint"
+            android:layout_marginStart="15dp"
+            android:textSize="18dp"
+            android:textColor="#484848"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sansation_bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/anprFormHeader"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/qrticket"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR Ticket"
+            android:fontFamily="@font/sansation_regular"
+            android:textSize="18dp"
+            android:textColor="#484848"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Input QR Code"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/field_background"
+                android:padding="15dp"
+                android:id="@+id/fieldCodeQr"
+                android:inputType="textPersonName"
+                android:textAllCaps="true"
+                android:fontFamily="@font/sansation_regular"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:id="@+id/imgScanner"
+                    android:layout_gravity="center"
+                    android:src="@drawable/scanner"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="35dp"
+            android:background="#8E2838"
+            android:text="Cancel Payment"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btnCancel"
+            android:layout_marginBottom="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/sansation_regular"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="35dp"
+            android:background="#07355D"
+            android:text="Proceed Payment"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btnProceed"
+            android:layout_marginBottom="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/sansation_regular"/>
+    </LinearLayout>
+</RelativeLayout>

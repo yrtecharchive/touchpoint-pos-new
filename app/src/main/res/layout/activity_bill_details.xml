@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FF"
+    tools:context=".BillDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/billDetailsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touchpoint"
+            android:layout_marginStart="15dp"
+            android:textSize="18dp"
+            android:textColor="#484848"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sansation_bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/billDetailsHeader"
+        android:padding="25dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bill Details"
+                            android:fontFamily="@font/sansation_bold"
+                            android:textColor="#272727"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="end">
+
+                        <LinearLayout
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/close"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Click the button to proceed to finish payment!"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/sansation_regular"
+                    android:textColor="#000000"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_background">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:src="@drawable/parking_ticket"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:fontFamily="@font/sansation_bold"
+                                android:textColor="#000000"
+                                android:padding="16dp"
+                                android:text="Bill Amount" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="end">
+
+                        <EditText
+                            android:id="@+id/etBillAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:padding="16dp"
+                            android:fontFamily="@font/sansation_regular"
+                            android:textColor="#282828"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Access Type"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="#272727"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/etAccessType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_background"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parking Code"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="#272727"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/etCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_background"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gate"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="#272727"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/etGate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_background"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entry Time"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="#272727"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/etEntryTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_background"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Time"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="#272727"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/etPayTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_background"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Class"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="#272727"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/etVehicleClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_background"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parking Duration"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="#272727"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/etParkingDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_background"
+                    android:padding="15dp"
+                    android:textSize="12dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"
+                    android:layout_marginBottom="75dp"/>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelinBillDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="#8E2838"
+            android:text="Cancel Payment"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/sansation_regular"/>
+
+        <Button
+            android:id="@+id/btnProceedinBillDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="#07355D"
+            android:text="Proceed Payment"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/sansation_regular"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FF"
+    tools:context=".CashPayment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:id="@+id/cashPaymentHeader"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touchpoint"
+            android:layout_marginStart="15dp"
+            android:textSize="18dp"
+            android:textColor="#484848"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sansation_bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/cashPaymentHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#37599D"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Amount"
+                        android:fontFamily="@font/sansation_regular"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="000"
+                        android:id="@+id/tvBillAmount"
+                        android:fontFamily="@font/sansation_regular"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Input Cash Amount"
+                android:textSize="15dp"
+                android:textColor="#FFFFFF"/>
+
+            <EditText
+                android:id="@+id/etCashAmountInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="55dp"
+                android:hint="00000"
+                android:enabled="false"
+                android:inputType="number"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cash_field"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textAlignment="center"
+                android:fontFamily="@font/sansation_regular"/>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:columnCount="4"
+            android:orientation="horizontal"
+            android:background="#FFFFFF">
+
+            <!-- Row 1 -->
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="1"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="2"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="3"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="Cancel"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+
+            <!-- Row 2 -->
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="4"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="5"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="6"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="Clear"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+
+            <!-- Row 3 -->
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="7"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="8"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="9"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="Delete"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+
+            <!-- Row 4 -->
+            <Button
+                android:id="@+id/button000"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="000"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button00"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="00"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="0"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+            <Button
+                android:id="@+id/buttonProceed"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:text="Proceed"
+                android:fontFamily="@font/sansation_regular"
+                android:background="@drawable/numpad_button_background"/>
+        </GridLayout>
+    </LinearLayout>
+</RelativeLayout>
